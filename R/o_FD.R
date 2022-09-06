@@ -76,6 +76,7 @@ Read_eTax <- function( d ,f ,e=".csv" ,n=0 ) {
 
   df <-
   read.csv( fn
+        ,header = F
 		 ,skip=n
 		 ,fileEncoding="CP932"
 		 ,stringsAsFactors=F
