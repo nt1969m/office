@@ -9,13 +9,14 @@
 \alias{b08_4.A2m}
 \alias{b08_4.ex}
 \title{【別表八(一) 受取配当等の益金不算入に関する明細書】
+HOB806_1.0.csv  # 2022(令和4年4月1日以後終了事業年度又は連結事業年度分)
 HOB800_16.0.csv # 2021(令和3年4月1日以後終了事業年度又は連結事業年度分)
 HOB800_15.0.csv # 2020（令和２年)
 HOB800_14.0.csv # 2019(平成31年4月1日以後終了事業年度又は連結事業年度分)
 HOB800_13.0.csv # 2018(平成30年4月1日以後終了事業年度又は連結事業年度分)
 s_b08 <- "HOB810_5.0"　# バージョン番号(_5.0)}
 \usage{
-b08.sheet(s = "2021-04-01")
+b08.sheet(s = "2022-04-01")
 
 b0801_init(n = 4)
 
@@ -55,6 +56,10 @@ https://www.e-tax.nta.go.jp/hojin/gimuka/csv_jyoho2_beppyo_03.htm
 \details{
 ○ レコードの内容及び留意事項
 【別表八（一） 受取配当等の益金不算入に関する明細書】
+(令和4年4月1日以後終了事業年度又は連結事業年度分)
+HOB806_1.0.csv
+https://www.e-tax.nta.go.jp/hojin/gimuka/csv_jyoho1/8/HOB806.pdf
 （令和３年４月１日以後終了事業年度分）
+HOB800_16.0.csv
 https://www.e-tax.nta.go.jp/hojin/gimuka/csv_jyoho1/7/HOB800.pdf
 }
