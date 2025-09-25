@@ -144,8 +144,9 @@ b06_1.sbi <- function( sbi ,o=1 ) {
 	                 ,nrow( b06 ) ," rows" ," x " ,ncol( b06 ) ," cols" ) )
 	#	print( b06 )
 	b06[ ,2 ] <-                      #列2 () 銘柄=
-	  paste( sbi[ ,2 ]                  #col 2 銘柄コード character
-	        ,sbi[ ,11 ]  )              #col 11 配当基準日 numeric
+	  paste( sbi[ ,2 ]    #col 2 銘柄コード character
+          ,sbi[ ,11 ] ) #col 11 配当基準日 numeric
+        # ,sbi[ ,11 ] |> format.Date("%Y-%m") )
 	#	  b06.銘柄( sbi[ ,2 ]             #col 2 銘柄コード character
 	b06[ ,3 ] <- as.integer(          #列3 (7) 収入金額=
 	  gsub(
@@ -204,8 +205,9 @@ b06_2.sbi <- function( sbi ,o=1 ) {
 
 #	print( b06 )
 	b06[ ,2 ] <-                        #列2 () 銘柄=
-	  paste( sbi[ ,2 ]                    #col 2 銘柄コード character
-	        ,sbi[ ,11 ] )                 #col 11 配当基準日 numeric
+	  paste( sbi[ ,2 ]    #col 2 銘柄コード character
+          ,sbi[ ,11 ] ) #col 11 配当基準日 numeric
+	       # ,sbi[ ,11 ] |> format.Date("%Y-%m") )
 # 	b06.銘柄( sbi$"銘柄コード" ,sbi$"配当基準日"  )
 	b06[ ,3 ] <- as.integer(            #列3 (13) 収入金額=
 	  gsub( "," ,"" ,sbi[ ,6 ] ) )        #col 6 配当金額 numeric
@@ -575,6 +577,7 @@ b0601_De <- function( b06_1 ,b06_2 ,i06_pt ,i06_ct ) {
   if ( De_1 > De_2 ) {
     b0601 <- b06_1    #_1 列 8(12)  控除を受ける所得税額=
   }
+  b0601[,2] <- b0601[,2] |> substr( 1 ,15 ) # 2025-09-25 add
   message( paste0( " # Advantage judgment : "
                ,colnames( b0601[ 1 ] ) , " , "
                    ,nrow( b0601 ) ," rows" ," x "
