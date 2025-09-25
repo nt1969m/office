@@ -113,8 +113,14 @@ b08_4.sbi <- function( sbi ,o=1 ) {
 	# 行数
 #	b08[ 1:nrow( sbi ) ,1 ]	<- "0801-4" #列1 ()
 #	message( paste0( " Re : " ,nrow( b08 ) ," rows ," ," 1 <- 0801-4" ) )
-	b08[ 1:nrow( sbi ) ,1 ]	<- "0801_01-4" #列1 ()
-	message( paste0( " Re : " ,nrow( b08 ) ," rows ," ," 1 <- 0801_01-4" ) )
+	# 2025-09-25 del sta
+#	b08[ 1:nrow( sbi ) ,1 ]	<- "0801_01-4" #列1 ()
+#	message( paste0( " Re : " ,nrow( b08 ) ," rows ," ," 1 <- 0801_01-4" ) )
+	# 2025-09-25 del end
+	# 2025-09-25 add sta
+	b08[ 1:nrow( sbi ) ,1 ]	<- "0801-4" #列1 ()
+	message( paste0( " Re : " ,nrow( b08 ) ," rows ," ," 1 <- 0801-4" ) )
+	# 2025-09-25 add end
 	#	列
 	message( paste0( " #  set cols ," ," 2 3 4:7 8 9" ) )
 	b08[ ,2 ]    <-            #列2 () 銘柄=

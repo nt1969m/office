@@ -1,6 +1,6 @@
 Package: office
 Title: What the Package Does (One Line, Title Case)
-Version: 2025.09.24.0001
+Version: 2025.09.25.0001
 Authors@R: person("Naohito","Takahashi",role= c("aut","cre"),email="nt1969m@gmail.com")
 Description: What the package does (one paragraph).
 #License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
